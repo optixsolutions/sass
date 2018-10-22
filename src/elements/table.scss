@@ -1,0 +1,76 @@
+$table-color: config('colors.grey-darker') !default;
+$table-border-color: config('colors.grey-light') !default;
+$table-background-color: config('colors.white') !default;
+
+$table-row-hover-background-color: config('colors.grey-lightest') !default;
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+th,
+td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table {
+    color: $table-color;
+    white-space: nowrap;
+    background-color: $table-background-color;
+
+    thead {
+        tr {
+            th,
+            td {
+                border-bottom: 2px solid $table-border-color;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            th,
+            td {
+                border-bottom: 1px solid $table-border-color;
+            }
+
+            &:hover {
+                th,
+                td {
+                    background-color: $table-row-hover-background-color;
+                }
+            }
+        }
+    }
+
+    thead,
+    tbody {
+        tr {
+            th {
+                padding: 1.25rem;
+            }
+    
+            td {
+                padding: 1rem 1.25rem;
+            }
+            
+            th,
+            td {
+                &:first-child {
+                    padding-left: 2rem;
+                }
+    
+                &:last-child {
+                    padding-right: 2rem;
+                }
+    
+                &.narrow {
+                    width: 1%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

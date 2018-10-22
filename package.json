@@ -1,0 +1,10 @@
+{
+  "name": "@optix/sass",
+  "version": "0.0.1",
+  "author": "Rich Moore",
+  "license": "MIT",
+  "main": "src/index.scss",
+  "devDependencies": {
+    "tailwindcss": "^0.6.6"
+  }
+}

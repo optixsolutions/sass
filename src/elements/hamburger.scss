@@ -1,0 +1,89 @@
+$hamburger-color: config('colors.black') !default;
+
+$hamburger-width: 2rem !default;
+$hamburger-height: 1.5rem !default;
+$hamburger-padding: 0.75rem !default;
+
+.hamburger {
+    line-height: 0;
+    cursor: pointer;
+    overflow: visible;
+    display: inline-block;
+    padding: $hamburger-padding;
+
+    .hamburger-holder {
+        position: relative;
+        display: inline-block;
+        width: $hamburger-width;
+        height: $hamburger-height;
+    }
+
+    .hamburger-inner {
+        top: 50%;
+        display: block;
+        margin-top: -1px;
+
+        &,
+        &:after,
+        &:before {
+            height: 3px;
+            position: absolute;
+            border-radius: 2px;
+            width: $hamburger-width;
+            transition-duration: 150ms;
+            transition-property: transform;
+            background-color: $hamburger-color;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+        }
+
+        &:before {
+            top: -10px;
+        }
+
+        &::after {
+            bottom: -10px;
+        }
+    }
+
+    .hamburger-inner {
+        transition-duration: 220ms;
+        transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+        &:before {
+            transition: top 100ms ease-in 250ms,
+                        opacity 100ms ease-in;
+        }
+
+        &:after {
+            transition: bottom 100ms ease-in 250ms,
+                        transform 220ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+    }
+
+    &.is-active {
+        .hamburger-inner {
+            transition-delay: 120ms;
+            transform: rotate(225deg);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+            &:before {
+                top: 0;
+                opacity: 0;
+                transition: top 100ms ease-out,
+                            opacity 100ms ease-out 120ms;
+            }
+
+            &:after {
+                bottom: 0;
+                transform: rotate(-90deg);
+                transition: bottom 100ms ease-out,
+                            transform 220ms cubic-bezier(0.215, 0.61, 0.355, 1) 120ms;
+            }
+        }
+    }
+}

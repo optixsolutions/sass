@@ -1,0 +1,22 @@
+@mixin placeholder {
+    $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input';
+
+    @each $placeholder in $placeholders {
+        &:#{$placeholder}-placeholder {
+            @content;
+            opacity: 1;
+        }
+    }
+}
+
+@mixin overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+@mixin transition($speed: 180ms, $delay: 0ms, $type: all, $easing: ease-out) {
+    transition: $type $speed $delay $easing;
+}

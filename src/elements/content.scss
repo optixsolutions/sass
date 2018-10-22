@@ -1,0 +1,74 @@
+$content-margin: 1.5rem !default;
+$content-line-height: config('leading.loose') !default;
+
+$content-table-padding: 0.5rem 0.75rem !default;
+$content-table-border-color: config('colors.grey') !default;
+
+.content {
+    overflow: auto;
+    line-height: $content-line-height;
+    
+    li + li {
+        margin-top: 0.25rem;
+    }
+    
+    p,
+    dl,
+    ol,
+    ul,
+    blockquote,
+    pre,
+    table {
+        &:not(:last-child) {
+            margin-bottom: $content-margin;
+        }
+    }
+
+    table {
+        width: 100%;
+        
+        td,
+        th {
+            vertical-align: top;
+            border-style: solid;
+            border-width: 0 0 1px;
+            padding: $content-table-padding;
+            border-color: $content-table-border-color;
+        }
+
+        th {
+            text-align: left;
+        }
+        
+        thead {
+            td,
+            th {
+                border-width: 0 0 2px;
+            }
+        }
+        
+        tfoot {
+            td,
+            th {
+                border-width: 2px 0 0;
+            }
+        }
+
+        tbody {
+            tr {
+                &:last-child {
+                    td,
+                    th {
+                        border-bottom-width: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &:after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}

@@ -1,0 +1,15 @@
+$icon-dimensions: 1.5rem !default;
+$icon-medium-dimensions: 2rem !default;
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    width: $icon-dimensions;
+    height: $icon-dimensions;
+
+    &.medium {
+        width: $icon-medium-dimensions;
+        height: $icon-medium-dimensions;
+    }
+}

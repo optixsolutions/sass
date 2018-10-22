@@ -1,0 +1,141 @@
+$button-padding: 0 1.5rem !default;
+$button-weight: config('fontWeights.normal') !default;
+$button-border-radius: config('borderRadius.default') !default;
+
+$button-color: config('colors.black') !default;
+$button-hover-color: config('colors.black') !default;
+
+$button-background-color: config('colors.white') !default;
+$button-hover-background-color: config('colors.grey-lightest') !default;
+
+$button-border-width: 2px !default;
+$button-border-color: config('colors.grey') !default;
+$button-hover-border-color: config('colors.grey-dark') !default;
+
+$button-disabled-opacity: 0.5 !default;
+$button-disabled-border-color: config('colors.grey-light') !default;
+$button-disabled-background-color: config('colors.white') !default;
+
+$button-static-color: config('colors.grey') !default;
+$button-static-background-color: config('colors.grey-lightest') !default;
+
+$buttonColours: (
+    primary: (primary, white, primary-dark, grey-lightest),
+    green: (green, white, green-dark, grey-lightest),
+    red: (red, white, red-dark, grey-lightest),
+) !default;
+
+.button {
+    @include control;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+    color: $button-color;
+    text-decoration: none;
+    justify-content: center;
+    padding: $button-padding;
+    font-weight: $button-weight;
+    border-width: $button-border-width;
+    border-color: $button-border-color;
+    border-radius: $button-border-radius;
+    background-color: $button-background-color;
+
+    .icon {
+        &:first-child:not(:last-child) {
+            margin-right: 0.1875em;
+            margin-left: calc(-0.5em - 2px);
+        }
+        
+        &:last-child:not(:first-child) {
+            margin-left: 0.1875em;
+            margin-right: calc(-0.5em - 2px);
+        }
+
+        &:first-child:last-child {
+            margin-left: calc(-0.5em - 2px);
+            margin-right: calc(-0.5em - 2px);
+        }
+    }
+
+    &:hover {
+        color: $button-hover-color;
+        border-color: $button-hover-border-color;
+        background-color: $button-hover-background-color;
+    }
+
+    @each $name, $colors in $buttonColours {
+        &.button-#{$name} {
+            color: config('colors.#{nth($colors, 2)}');
+            border-color: config('colors.#{nth($colors, 1)}');
+            background-color: config('colors.#{nth($colors, 1)}');
+    
+            &:hover {
+                color: config('colors.#{nth($colors, 4)}');
+                border-color: config('colors.#{nth($colors, 3)}');
+                background-color: config('colors.#{nth($colors, 3)}');
+            }
+
+            &[disabled] {
+                border-color: transparent;
+                background-color: config('colors.#{nth($colors, 1)}');
+            }
+
+            &.loading {
+                &:after {
+                    border-left-color: config('colors.#{nth($colors, 2)}');
+                    border-bottom-color: config('colors.#{nth($colors, 2)}');
+                }
+            }
+
+            &.outlined {
+                color: config('colors.#{nth($colors, 1)}');
+        
+                &:hover {
+                    color: config('colors.#{nth($colors, 2)}');
+                    background-color: config('colors.#{nth($colors, 3)}');
+                }
+            }
+        }
+    }
+
+    &.outlined {
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    &.static {
+        pointer-events: none;
+        color: $button-static-color;
+        background-color: $button-static-background-color;
+    }
+
+    &[disabled] {
+        opacity: $button-disabled-opacity;
+        border-color: $button-disabled-border-color;
+        background-color: $button-disabled-background-color;
+    }
+
+    &.loading {
+        color: transparent;
+        pointer-events: none;
+
+        &:after {
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            display: block;
+            position: absolute;
+            border-radius: 100px;
+            top: calc(50% - (1rem / 2));
+            left: calc(50% - (1rem / 2));
+            border: 2px solid transparent;
+            animation: spin 500ms infinite linear;
+            border-left-color: $button-border-color;
+            border-bottom-color: $button-border-color;
+        }
+    }
+}

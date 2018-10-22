@@ -1,0 +1,36 @@
+$modal-z-index: 50 !default;
+$modal-background-color: rgba(0, 0, 0, 0.85) !default;
+
+.modal {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: $modal-z-index;
+
+    &.active {
+        display: flex;
+    }
+}
+
+.modal-background {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: $modal-background-color;
+}
+
+.modal-content {
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+    max-height: calc(100vh - 160px);
+}

@@ -1,0 +1,83 @@
+$dropdown-padding: 0.5rem 0 !default;
+$dropdown-text-size: config('textSizes.sm') !default;
+$dropdown-border-color: config('colors.grey-light') !default;
+$dropdown-border-radius: config('borderRadius.default') !default;
+$dropdown-background-color: config('colors.white') !default;
+
+$dropdown-z-index: config('zIndex.20') !default;
+$dropdown-min-width: config('width.48') !default;
+$dropdown-shadow: config('shadows.default') !default;
+
+$dropdown-item-padding: 0.3rem 1rem !default;
+$dropdown-item-line-height: config('leading.normal') !default;
+
+$dropdown-item-hover-color: config('colors.black') !default;
+$dropdown-item-hover-background-color: config('colors.grey-lighter') !default;
+
+$dropdown-item-active-color: config('colors.white') !default;
+$dropdown-item-active-background-color: config('colors.primary') !default;
+
+.dropdown {
+    position: relative;
+    vertical-align: top;
+    display: inline-flex;
+
+    &.open {
+        .dropdown-menu {
+            display: block;
+        }
+    }
+
+    &:not(.right) {
+        .dropdown-menu {
+            left: 0;
+        }
+    }
+
+    &.right {
+        .dropdown-menu {
+            right: 0;
+        }
+    }
+}
+
+.dropdown-menu {
+    top: 100%;
+    display: none;
+    position: absolute;
+    padding-top: 0.25rem;
+    z-index: $dropdown-z-index;
+    min-width: $dropdown-min-width;
+}
+
+.dropdown-scroll {
+    overflow: auto;
+    max-height: 12rem;
+}
+
+.dropdown-content {
+    padding: $dropdown-padding;
+    box-shadow: $dropdown-shadow;
+    border-radius: $dropdown-border-radius;
+    border: solid 1px $dropdown-border-color;
+    background-color: $dropdown-background-color;
+}
+
+.dropdown-item {
+    display: block;
+    text-align: left;
+    white-space: nowrap;
+    font-size: $dropdown-text-size;
+    padding: $dropdown-item-padding;
+    line-height: $dropdown-item-line-height;
+
+    &:hover {
+        color: $dropdown-item-hover-color;
+        background-color: $dropdown-item-hover-background-color;
+    }
+
+    &.active {
+        color: $dropdown-item-active-color;
+        background-color: $dropdown-item-active-background-color;
+    }
+}

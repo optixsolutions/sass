@@ -1,0 +1,28 @@
+$title-color: $body-color !default;
+$title-size: config('textSizes.3xl') !default;
+$title-font: config('fonts.sans') !default;
+$title-weight: config('fontWeights.bold') !default;
+
+$subtitle-color: $body-color !default;
+$subtitle-size: config('textSizes.sm') !default;
+$subtitle-font: config('fonts.serif') !default;
+$subtitle-weight: config('fontWeights.normal') !default;
+
+.title,
+.subtitle {
+    word-break: break-word;
+}
+
+.title {
+    color: $title-color;
+    font-size: $title-size;
+    font-family: $title-font;
+    font-weight: $title-weight;
+}
+
+.subtitle {
+    color: $subtitle-color;
+    font-size: $subtitle-size;
+    font-family: $subtitle-font;
+    font-weight: $subtitle-weight;
+}
