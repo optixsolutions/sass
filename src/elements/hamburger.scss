@@ -65,7 +65,7 @@ $hamburger-padding: 0.75rem !default;
         }
     }
 
-    &.is-active {
+    &.active {
         .hamburger-inner {
             transition-delay: 120ms;
             transform: rotate(225deg);

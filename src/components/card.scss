@@ -1,0 +1,21 @@
+$card-padding: 2rem !default;
+$card-shadow: config('shadows.lg') !default;
+$card-background-color: config('colors.white') !default;
+$card-border-radius: config('borderRadius.default') !default;
+
+
+.card {
+    box-shadow: $card-shadow;
+    border-radius: $card-border-radius;
+    background-color: $card-background-color;
+}
+
+.card-image {
+    img {
+        border-radius: $card-border-radius $card-border-radius 0 0;
+    }
+}
+
+.card-body {
+    padding: $card-padding;
+}
