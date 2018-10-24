@@ -10,21 +10,21 @@ $image-sizes: 60 !default;
         display: block;
     }
 
-    &.1by1,
-    &.1by2,
-    &.1by3,
-    &.2by1,
-    &.2by3,
-    &.3by1,
-    &.3by2,
-    &.3by4,
-    &.3by5,
-    &.4by3,
-    &.4by5,
-    &.5by3,
-    &.5by4,
-    &.9by16,
-    &.16by9 {
+    &.image-1by1,
+    &.image-1by2,
+    &.image-1by3,
+    &.image-2by1,
+    &.image-2by3,
+    &.image-3by1,
+    &.image-3by2,
+    &.image-3by4,
+    &.image-3by5,
+    &.image-4by3,
+    &.image-4by5,
+    &.image-5by3,
+    &.image-5by4,
+    &.image-9by16,
+    &.image-16by9 {
         img {
             @include overlay;
 
@@ -33,68 +33,68 @@ $image-sizes: 60 !default;
         }
     }
 
-    &.1by1 {
+    &.image-1by1 {
         padding-top: 100%;
     }
 
-    &.1by2 {
+    &.image-1by2 {
         padding-top: 200%;
     }
     
-    &.1by3 {
+    &.image-1by3 {
         padding-top: 300%;
     }
 
-    &.2by1 {
+    &.image-2by1 {
         padding-top: 50%;
     }
 
-    &.2by3 {
+    &.image-2by3 {
         padding-top: 150%;
     }
 
-    &.3by1 {
+    &.image-3by1 {
         padding-top: 33.3333%;
     }
 
-    &.3by2 {
+    &.image-3by2 {
         padding-top: 66.6666%;
     }
 
-    &.3by4 {
+    &.image-3by4 {
         padding-top: 133.3333%;
     }
 
-    &.3by5 {
+    &.image-3by5 {
         padding-top: 166.6666%;
     }
 
-    &.4by3 {
+    &.image-4by3 {
         padding-top: 75%;
     }
 
-    &.4by5 {
+    &.image-4by5 {
         padding-top: 125%;
     }
 
-    &.5by3 {
+    &.image-5by3 {
         padding-top: 60%;
     }
 
-    &.5by4 {
+    &.image-5by4 {
         padding-top: 80%;
     }
 
-    &.9by16 {
+    &.image-9by16 {
         padding-top: 177.7777%;
     }
 
-    &.16by9 {
+    &.image-16by9 {
         padding-top: 56.25%;
     }
 
     @each $size in $image-sizes {
-        &.#{$size}x#{$size} {
+        &.image-#{$size}x#{$size} {
             width: $size * 1px;
             height: $size * 1px;
         }
