@@ -10,12 +10,15 @@ $body-background-color: config('colors.white') !default;
 $link-color: config('colors.blue') !default;
 $link-hover-color: config('colors.blue-dark') !default;
 
-$hr-background-color: config('colors.black') !default;
+$hr-background-color: config('colors.grey') !default;
+
+$blockquote-border-color: config('colors.primary') !default;
+$blockquote-background-color: config('colors.white') !default;
 
 html {
     min-width: 300px;
-    text-size-adjust: 100%;
     font-size: $body-size;
+    text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -60,6 +63,12 @@ a {
 hr {
     height: 1px;
     background-color: $hr-background-color;
+}
+
+blockquote {
+    padding: 0.75rem 1.5rem;
+    background-color: $blockquote-background-color;
+    border-left: 5px solid $blockquote-border-color;
 }
 
 [v-cloak] {

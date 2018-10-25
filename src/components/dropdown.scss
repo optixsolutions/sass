@@ -8,6 +8,8 @@ $dropdown-z-index: config('zIndex.20') !default;
 $dropdown-min-width: config('width.48') !default;
 $dropdown-shadow: config('shadows.default') !default;
 
+$dropdown-menu-padding: 0.25rem !default;
+
 $dropdown-item-padding: 0.3rem 1rem !default;
 $dropdown-item-line-height: config('leading.normal') !default;
 
@@ -39,13 +41,25 @@ $dropdown-item-active-background-color: config('colors.primary') !default;
             right: 0;
         }
     }
+
+    &:not(.up) {
+        .dropdown-menu {
+            top: 100%;
+            padding-top: $dropdown-menu-padding;
+        }
+    }
+
+    &.up {
+        .dropdown-menu {
+            bottom: 100%;
+            padding-bottom: $dropdown-menu-padding;
+        }
+    }
 }
 
 .dropdown-menu {
-    top: 100%;
     display: none;
     position: absolute;
-    padding-top: 0.25rem;
     z-index: $dropdown-z-index;
     min-width: $dropdown-min-width;
 }
@@ -80,4 +94,10 @@ $dropdown-item-active-background-color: config('colors.primary') !default;
         color: $dropdown-item-active-color;
         background-color: $dropdown-item-active-background-color;
     }
+}
+
+.dropdown-divider {
+    height: 1px;
+    margin: 0.5rem 0;
+    background-color: $dropdown-border-color;
 }

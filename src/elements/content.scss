@@ -4,6 +4,7 @@ $content-line-height: config('leading.loose') !default;
 
 $content-table-padding: 0.5rem 0.75rem !default;
 $content-table-border-color: config('colors.grey') !default;
+$content-table-heading-weight: config('fontWeights.semibold') !default;
 
 .content {
     overflow: auto;
@@ -18,12 +19,27 @@ $content-table-border-color: config('colors.grey') !default;
     dl,
     ol,
     ul,
-    blockquote,
+    hr,
     pre,
-    table {
+    table,
+    blockquote {
         &:not(:last-child) {
             margin-bottom: $content-margin;
         }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        &:not(:last-child) {
+            margin-bottom: $content-margin / 2;
+        }
+    }
+
+    hr {
+        margin-top: 0;
     }
 
     table {
@@ -36,16 +52,18 @@ $content-table-border-color: config('colors.grey') !default;
             border-width: 0 0 1px;
             padding: $content-table-padding;
             border-color: $content-table-border-color;
-        }
 
-        th {
-            text-align: left;
+            // TinyMCE fix
+            font-size: $text-size;
+            font-family: $body-family;
         }
         
         thead {
             td,
             th {
+                text-align: left;
                 border-width: 0 0 2px;
+                font-weight: $content-table-heading-weight;
             }
         }
         
@@ -64,6 +82,32 @@ $content-table-border-color: config('colors.grey') !default;
                         border-bottom-width: 0;
                     }
                 }
+            }
+        }
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: none !important;
+        height: auto !important;
+
+        @screen md {
+            &.image-left,
+            &.image-right {
+                max-width: 50%;
+                margin-bottom: $content-margin;
+            }
+
+            &.image-left {
+                float: left !important;
+                margin-right: $content-margin;
+            }
+
+            &.image-right {
+                float: right !important;
+                margin-left: $content-margin;
             }
         }
     }

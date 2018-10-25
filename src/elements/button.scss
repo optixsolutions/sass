@@ -19,8 +19,9 @@ $button-disabled-background-color: config('colors.white') !default;
 $button-static-color: config('colors.grey') !default;
 $button-static-background-color: config('colors.grey-lightest') !default;
 
-$buttonColours: (
+$button-colours: (
     primary: (primary, white, primary-dark, grey-lightest),
+    grey: (grey-light, black, grey, black),
     green: (green, white, green-dark, grey-lightest),
     red: (red, white, red-dark, grey-lightest),
 ) !default;
@@ -64,7 +65,7 @@ $buttonColours: (
         background-color: $button-hover-background-color;
     }
 
-    @each $name, $colors in $buttonColours {
+    @each $name, $colors in $button-colours {
         &.button-#{$name} {
             color: config('colors.#{nth($colors, 2)}');
             border-color: config('colors.#{nth($colors, 1)}');
