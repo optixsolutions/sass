@@ -19,13 +19,6 @@ $button-disabled-background-color: config('colors.white') !default;
 $button-static-color: config('colors.grey') !default;
 $button-static-background-color: config('colors.grey-lightest') !default;
 
-$button-colours: (
-    primary: (primary, white, primary-dark, grey-lightest),
-    grey: (grey-light, black, grey, black),
-    green: (green, white, green-dark, grey-lightest),
-    red: (red, white, red-dark, grey-lightest),
-) !default;
-
 .button {
     @include control;
     cursor: pointer;

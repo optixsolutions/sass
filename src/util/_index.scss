@@ -1,5 +1,6 @@
-@charset "utf-8";
+@charset 'UTF-8';
 
-@import "animations";
-@import "control";
-@import "mixins";
+@import 'variables';
+@import 'animations';
+@import 'mixins';
+@import 'control';
