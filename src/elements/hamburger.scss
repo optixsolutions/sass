@@ -2,6 +2,7 @@ $hamburger-color: config('colors.black') !default;
 
 $hamburger-width: 2rem !default;
 $hamburger-height: 1.5rem !default;
+$hambuger-spacing: 10px !default;
 $hamburger-padding: 0.75rem !default;
 
 .hamburger {
@@ -42,11 +43,11 @@ $hamburger-padding: 0.75rem !default;
         }
 
         &:before {
-            top: -10px;
+            top: -#{$hambuger-spacing};
         }
 
         &::after {
-            bottom: -10px;
+            bottom: -#{$hambuger-spacing};
         }
     }
 
