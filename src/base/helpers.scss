@@ -1,0 +1,21 @@
+$transition-speed: 180ms !default;
+
+.transition {
+    @include transition($transition-speed);
+}
+
+@responsive {
+    .border-box {
+        box-sizing: border-box;
+    }
+    
+    .content-box {
+        box-sizing: content-box;
+    }
+
+    @each $rotation in $rotations {
+        &.rotate-#{$rotation} {
+            transform: rotate(#{$rotation}deg);
+        }
+    }
+}

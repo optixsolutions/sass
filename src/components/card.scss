@@ -3,7 +3,6 @@ $card-shadow: config('shadows.lg') !default;
 $card-background-color: config('colors.white') !default;
 $card-border-radius: config('borderRadius.default') !default;
 
-
 .card {
     box-shadow: $card-shadow;
     border-radius: $card-border-radius;

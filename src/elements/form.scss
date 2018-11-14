@@ -343,3 +343,12 @@ $field-margin: config('margin.2') !default;
         }
     }
 }
+
+.g-recaptcha {
+    display: flex;
+
+    @media (max-width: 370px) {
+        transform: scale(0.77);
+        justify-content: center;
+    }
+}
