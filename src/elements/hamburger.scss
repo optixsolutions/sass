@@ -1,4 +1,5 @@
 $hamburger-color: config('colors.black') !default;
+$hamburger-active-color: config('colors.black') !default;
 
 $hamburger-width: 2rem !default;
 $hamburger-height: 1.5rem !default;
@@ -70,11 +71,13 @@ $hamburger-padding: 0.75rem !default;
         .hamburger-inner {
             transition-delay: 120ms;
             transform: rotate(225deg);
+            background-color: $hamburger-active-color;
             transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
             &:before {
                 top: 0;
                 opacity: 0;
+                background-color: $hamburger-active-color;
                 transition: top 100ms ease-out,
                             opacity 100ms ease-out 120ms;
             }
@@ -82,6 +85,7 @@ $hamburger-padding: 0.75rem !default;
             &:after {
                 bottom: 0;
                 transform: rotate(-90deg);
+                background-color: $hamburger-active-color;
                 transition: bottom 100ms ease-out,
                             transform 220ms cubic-bezier(0.215, 0.61, 0.355, 1) 120ms;
             }

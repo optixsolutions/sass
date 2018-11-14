@@ -184,7 +184,7 @@ $field-margin: config('margin.2') !default;
     display: inline-block;
     
     &:not(.multiple) {
-        height: calc(#{$control-height} + 4px);
+        height: $control-height;
     }
     
     &:not(.multiple) {

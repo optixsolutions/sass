@@ -7,6 +7,9 @@ $body-line-height: config('leading.normal') !default;
 $body-color: config('colors.black') !default;
 $body-background-color: config('colors.white') !default;
 
+$strong-weight: config('fontWeights.bold') !default;
+$heading-weight: config('fontWeights.bold') !default;
+
 $link-color: config('colors.blue') !default;
 $link-hover-color: config('colors.blue-dark') !default;
 
@@ -48,6 +51,20 @@ body {
     color: $body-color;
     font-weight: $body-weight;
     line-height: $body-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $heading-weight;
+}
+
+b,
+strong {
+    font-weight: $strong-weight;
 }
 
 a {

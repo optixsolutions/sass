@@ -2,6 +2,8 @@ $content-margin: 1.5rem !default;
 $content-color: $body-color !default;
 $content-line-height: config('leading.loose') !default;
 
+$content-img-border-radius: 0 !default;
+
 $content-table-padding: 0.5rem 0.75rem !default;
 $content-table-border-color: config('colors.grey') !default;
 $content-table-heading-weight: config('fontWeights.semibold') !default;
@@ -92,6 +94,7 @@ $content-table-heading-weight: config('fontWeights.semibold') !default;
         margin-right: auto;
         float: none !important;
         height: auto !important;
+        border-radius: $content-img-border-radius;
 
         @screen md {
             &.image-left,

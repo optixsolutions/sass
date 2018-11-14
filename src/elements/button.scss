@@ -17,6 +17,7 @@ $button-disabled-border-color: config('colors.grey-light') !default;
 $button-disabled-background-color: config('colors.white') !default;
 
 $button-static-color: config('colors.grey') !default;
+$button-static-border-color: config('colors.grey-light') !default;
 $button-static-background-color: config('colors.grey-lightest') !default;
 
 .button {
@@ -104,6 +105,7 @@ $button-static-background-color: config('colors.grey-lightest') !default;
     &.static {
         pointer-events: none;
         color: $button-static-color;
+        border-color: $button-static-border-color;
         background-color: $button-static-background-color;
     }
 
