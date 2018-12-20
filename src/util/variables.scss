@@ -1,14 +1,14 @@
 $button-colours: (
-    primary: (primary, white, primary-dark, grey-lightest),
-    grey: (grey-light, black, grey, black),
-    green: (green, white, green-dark, grey-lightest),
-    red: (red, white, red-dark, grey-lightest),
+    'primary': ('primary', 'white', 'primary-dark', 'grey-lightest'),
+    'grey': ('grey-light', 'black', 'grey', 'black'),
+    'green': ('green', 'white', 'green-dark', 'grey-lightest'),
+    'red': ('red', 'white', 'red-dark', 'grey-lightest'),
 ) !default;
 
 $icon-sizes: (
-    small: 1rem,
-    medium: 2rem,
-    large: 3rem
+    'small': 1rem,
+    'medium': 2rem,
+    'large': 3rem
 ) !default;
 
 $image-sizes: 60 80 100 !default;

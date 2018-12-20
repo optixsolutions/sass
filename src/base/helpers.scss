@@ -14,7 +14,7 @@ $transition-speed: 180ms !default;
     }
 
     @each $rotation in $rotations {
-        &.rotate-#{$rotation} {
+        .rotate-#{$rotation} {
             transform: rotate(#{$rotation}deg);
         }
     }
