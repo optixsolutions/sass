@@ -35,21 +35,9 @@ $pagination-disabled-background-color: config('colors.white') !default;
 
 .pagination-previous,
 .pagination-next,
-.pagination-link,
-.pagination-ellipsis {
-    @include control;
-
-    user-select: none;
-    text-align: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    justify-content: center;
-    margin: $pagination-margin;
-}
-
-.pagination-previous,
-.pagination-next,
 .pagination-link {
+    @include control;
+    
     align-items: center;
     color: $pagination-color;
     min-width: $pagination-min-width;
@@ -71,6 +59,18 @@ $pagination-disabled-background-color: config('colors.white') !default;
         border-color: $pagination-disabled-border-color;
         background-color: $pagination-disabled-background-color;
     }
+}
+
+.pagination-previous,
+.pagination-next,
+.pagination-link,
+.pagination-ellipsis {
+    user-select: none;
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    justify-content: center;
+    margin: $pagination-margin;
 }
 
 .pagination-previous,
