@@ -15,6 +15,7 @@ $input-active-border-color: config('colors.grey-light') !default;
 $input-disabled-border-color: config('colors.grey-light') !default;
 
 $input-background-color: config('colors.white') !default;
+$input-hover-background-color: config('colors.white') !default;
 $input-disabled-background-color: config('colors.grey-lighter') !default;
 
 $select-arrow-color: config('colors.black') !default;
@@ -24,9 +25,19 @@ $checkbox-radius: config('borderRadius.default') !default;
 $checkbox-border-color: config('colors.grey-light') !default;
 $checkbox-background-color: transparent !default;
 
+$checkbox-hover-border-color: config('colors.grey') !default;
+$checkbox-hover-background-color: transparent !default;
+
+$checkbox-focus-border-color: config('colors.grey-dark') !default;
+$checkbox-focus-background-color: transparent !default;
+
 $checkbox-checked-color: config('colors.white') !default;
-$checkbox-checked-border-color: config('colors.primary') !default;
-$checkbox-checked-background-color: config('colors.primary') !default;
+$checkbox-checked-border-color: config('colors.blue') !default;
+$checkbox-checked-background-color: config('colors.blue') !default;
+
+$checkbox-checked-hover-color: config('colors.white') !default;
+$checkbox-checked-hover-border-color: config('colors.blue-dark') !default;
+$checkbox-checked-hover-background-color: config('colors.blue-dark') !default;
 
 $label-size: $text-size !default;
 $label-margin: config('margin.2') !default;
@@ -55,6 +66,7 @@ $field-margin: config('margin.2') !default;
     &:hover {
         color: $input-hover-color;
         border-color: $input-hover-border-color;
+        background-color: $input-hover-background-color;
 
         @include placeholder {
             color: $input-hover-placeholder-color;
@@ -127,6 +139,13 @@ $field-margin: config('margin.2') !default;
             border: solid 1px $checkbox-border-color;
             background-color: $checkbox-background-color;
         }
+
+        &:hover {
+            &:before {
+                border-color: $checkbox-hover-border-color;
+                background-color: $checkbox-hover-background-color;
+            }
+        }
     }
 
     &[type='checkbox'] {
@@ -147,6 +166,18 @@ $field-margin: config('margin.2') !default;
                 border-right: 2px solid $checkbox-checked-color;
                 border-bottom: 2px solid $checkbox-checked-color;
                 transform: translate(-50%, calc(-50% - 1px)) rotate(45deg);
+            }
+
+            &:hover {
+                &:before {
+                    border-color: $checkbox-checked-hover-border-color;
+                    background-color: $checkbox-checked-hover-background-color;
+                }
+
+                &:after {
+                    border-right-color: $checkbox-checked-hover-color;
+                    border-bottom-color: $checkbox-checked-hover-color;
+                }
             }
         }
     }
@@ -175,11 +206,22 @@ $field-margin: config('margin.2') !default;
                 transform: translateY(-50%);
                 background-color: $checkbox-checked-background-color;
             }
+
+            &:hover {
+                &:after {
+                    background-color: $checkbox-checked-hover-background-color;
+                }
+            }
         }
     }
 
-    &:focus + label {
-        outline: 5px auto -webkit-focus-ring-color;
+    &:focus {
+        + label {
+            &:before {
+                border-color: $checkbox-focus-border-color;
+                background-color: $checkbox-focus-background-color;
+            }
+        }
     }
 }
 
