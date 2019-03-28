@@ -1,5 +1,5 @@
 $button-padding: 0 1.5rem !default;
-$button-weight: config('fontWeights.normal') !default;
+$button-font-weight: config('fontWeights.normal') !default;
 $button-border-radius: config('borderRadius.default') !default;
 
 $button-color: config('colors.black') !default;
@@ -30,7 +30,7 @@ $button-static-background-color: config('colors.grey-lightest') !default;
     text-decoration: none;
     justify-content: center;
     padding: $button-padding;
-    font-weight: $button-weight;
+    font-weight: $button-font-weight;
     border-width: $button-border-width;
     border-color: $button-border-color;
     border-radius: $button-border-radius;
@@ -60,7 +60,7 @@ $button-static-background-color: config('colors.grey-lightest') !default;
     }
 
     @each $name, $colors in $button-colours {
-        &.#{$name} {
+        &.#{"" + $name} {
             color: config('colors.#{nth($colors, 2)}');
             border-color: config('colors.#{nth($colors, 1)}');
             background-color: config('colors.#{nth($colors, 1)}');

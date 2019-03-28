@@ -11,4 +11,22 @@ $icon-sizes: (
     'large': 3rem
 ) !default;
 
+$image-ratios: (
+    1by1: 100%,
+    1by2: 50%,
+    1by3: 300%,
+    2by1: 50%,
+    2by3: 150%,
+    3by1: 33.3333%,
+    3by2: 66.6666%,
+    3by4: 133.3333%,
+    3by5: 166.6666%,
+    4by3: 75%,
+    4by5: 125%,
+    5by3: 60%,
+    5by4: 80%,
+    9by16: 177.7777%,
+    16by9: 56.25%
+) !default;
+
 $rotations: 90 180 270 !default;
