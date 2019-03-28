@@ -6,7 +6,7 @@ $content-img-border-radius: 0 !default;
 
 $content-table-padding: 0.5rem 0.75rem !default;
 $content-table-border-color: config('colors.grey') !default;
-$content-table-heading-weight: config('fontWeights.semibold') !default;
+$content-table-heading-font-weight: config('fontWeights.semibold') !default;
 
 .content {
     overflow: auto;
@@ -56,8 +56,8 @@ $content-table-heading-weight: config('fontWeights.semibold') !default;
             border-color: $content-table-border-color;
 
             // TinyMCE fix
-            font-size: $text-size;
-            font-family: $body-family;
+            font-size: $body-font-size;
+            font-family: $body-font-family;
         }
         
         thead {
@@ -65,7 +65,7 @@ $content-table-heading-weight: config('fontWeights.semibold') !default;
             th {
                 text-align: left;
                 border-width: 0 0 2px;
-                font-weight: $content-table-heading-weight;
+                font-weight: $content-table-heading-font-weight;
             }
         }
         

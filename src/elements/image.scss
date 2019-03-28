@@ -29,16 +29,9 @@ $image-ratios: (
     }
 
     @each $ratio, $padding in $image-ratios {
-        &.image-#{$ratio} {
+        &.ratio-#{$ratio} {
             padding-top: $padding;
             @extend %ratio-image-position;
-        }
-    }
-
-    @each $size in $image-sizes {
-        &.image-#{$size}x#{$size} {
-            width: $size * 1px;
-            height: $size * 1px;
         }
     }
 }

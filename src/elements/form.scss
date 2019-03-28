@@ -18,7 +18,8 @@ $input-background-color: config('colors.white') !default;
 $input-hover-background-color: config('colors.white') !default;
 $input-disabled-background-color: config('colors.grey-lighter') !default;
 
-$select-arrow-color: config('colors.black') !default;
+$select-arrow-color: config('colors.grey') !default;
+$select-hover-arrow-color: config('colors.grey-dark') !default;
 $select-disabled-arrow-color: config('colors.grey-light') !default;
 
 $checkbox-radius: config('borderRadius.default') !default;
@@ -39,13 +40,13 @@ $checkbox-checked-hover-color: config('colors.white') !default;
 $checkbox-checked-hover-border-color: config('colors.blue-dark') !default;
 $checkbox-checked-hover-background-color: config('colors.blue-dark') !default;
 
-$label-size: $text-size !default;
+$label-font-size: $body-font-size !default;
 $label-margin: config('margin.2') !default;
 $label-color: config('colors.black') !default;
 $label-asterisk-color: config('colors.red') !default;
-$label-weight: config('fontWeights.semibold') !default;
+$label-font-weight: config('fontWeights.semibold') !default;
 
-$help-size: config('textSizes.xs') !default;
+$help-font-size: config('textSizes.xs') !default;
 $help-color: config('colors.grey') !default;
 
 $field-margin: config('margin.2') !default;
@@ -239,20 +240,19 @@ $field-margin: config('margin.2') !default;
     &:not(.multiple) {
         &:after {
             top: 50%;
+            width: 0;
+            height: 0;
             z-index: 4;
             content: '';
             display: block;
             right: 1.125rem;
-            width: 0.625rem;
-            height: 0.625rem;
-            border-radius: 2px;
             position: absolute;
-            margin-top: -0.3rem;
             pointer-events: none;
             transform-origin: center;
-            border-left: solid 3px $select-arrow-color;
-            border-bottom: solid 3px $select-arrow-color;
-            transform: translateY(-0.25rem) rotate(-45deg);
+            transform: translateY(-0.1rem);
+            border-left: solid 5px transparent;
+            border-right: solid 5px transparent;
+            border-top: solid 5px $select-arrow-color;
         }
     }
 
@@ -284,7 +284,7 @@ $field-margin: config('margin.2') !default;
 
     &:not(.multiple):hover {
         &:after {
-            border-color: $select-arrow-color;
+            border-top-color: $select-hover-arrow-color;
         }
     }
 
@@ -304,8 +304,8 @@ $field-margin: config('margin.2') !default;
 .label {
     display: block;
     color: $label-color;
-    font-size: $label-size;
-    font-weight: $label-weight;
+    font-size: $label-font-size;
+    font-weight: $label-font-weight;
 
     &:not(:last-child) {
         margin-bottom: $label-margin;
@@ -315,7 +315,7 @@ $field-margin: config('margin.2') !default;
 .help {
     display: block;
     color: $help-color;
-    font-size: $help-size;
+    font-size: $help-font-size;
     margin-top: config('margin.1');
 }
 

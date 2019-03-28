@@ -1,5 +1,5 @@
 $dropdown-padding: 0.5rem 0 !default;
-$dropdown-text-size: config('textSizes.sm') !default;
+$dropdown-font-size: config('textSizes.sm') !default;
 $dropdown-border-color: config('colors.grey-light') !default;
 $dropdown-border-radius: config('borderRadius.default') !default;
 $dropdown-background-color: config('colors.white') !default;
@@ -81,7 +81,7 @@ $dropdown-item-active-background-color: config('colors.blue') !default;
     display: block;
     text-align: left;
     white-space: nowrap;
-    font-size: $dropdown-text-size;
+    font-size: $dropdown-font-size;
     padding: $dropdown-item-padding;
     line-height: $dropdown-item-line-height;
 

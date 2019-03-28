@@ -60,7 +60,7 @@ $button-static-background-color: config('colors.grey-lightest') !default;
     }
 
     @each $name, $colors in $button-colours {
-        &.button-#{$name} {
+        &.#{$name} {
             color: config('colors.#{nth($colors, 2)}');
             border-color: config('colors.#{nth($colors, 1)}');
             background-color: config('colors.#{nth($colors, 1)}');

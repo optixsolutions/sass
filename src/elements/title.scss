@@ -1,12 +1,12 @@
 $title-color: $body-color !default;
-$title-size: config('textSizes.3xl') !default;
-$title-font: config('fonts.sans') !default;
-$title-weight: config('fontWeights.bold') !default;
+$title-font-size: config('textSizes.3xl') !default;
+$title-font-family: config('fonts.sans') !default;
+$title-font-weight: config('fontWeights.bold') !default;
 
 $subtitle-color: $body-color !default;
-$subtitle-size: config('textSizes.sm') !default;
-$subtitle-font: config('fonts.serif') !default;
-$subtitle-weight: config('fontWeights.normal') !default;
+$subtitle-font-size: config('textSizes.sm') !default;
+$subtitle-font-family: config('fonts.serif') !default;
+$subtitle-font-weight: config('fontWeights.normal') !default;
 
 .title,
 .subtitle {
@@ -15,14 +15,14 @@ $subtitle-weight: config('fontWeights.normal') !default;
 
 .title {
     color: $title-color;
-    font-size: $title-size;
-    font-family: $title-font;
-    font-weight: $title-weight;
+    font-size: $title-font-size;
+    font-family: $title-font-family;
+    font-weight: $title-font-weight;
 }
 
 .subtitle {
     color: $subtitle-color;
-    font-size: $subtitle-size;
-    font-family: $subtitle-font;
-    font-weight: $subtitle-weight;
+    font-size: $subtitle-font-size;
+    font-family: $subtitle-font-family;
+    font-weight: $subtitle-font-weight;
 }

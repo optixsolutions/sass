@@ -8,7 +8,7 @@ $icon-dimension: 1.5rem !default;
     justify-content: center;
 
     @each $name, $size in $icon-sizes {
-        &.icon-#{$name} {
+        &.#{$name} {
             width: $size;
             height: $size;
         }

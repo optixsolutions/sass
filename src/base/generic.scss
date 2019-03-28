@@ -1,17 +1,26 @@
-$body-size: 16px !default;
-$text-size: config('textSizes.sm') !default;
-$body-family: config('fonts.sans') !default;
-$body-weight: config('fontWeights.normal') !default;
+$base-font-size: 16px !default;
+
+$body-font-size: config('textSizes.sm') !default;
+$body-font-family: config('fonts.sans') !default;
+$body-font-weight: config('fontWeights.normal') !default;
 $body-line-height: config('leading.normal') !default;
 
 $body-color: config('colors.black') !default;
 $body-background-color: config('colors.white') !default;
 
-$strong-weight: config('fontWeights.bold') !default;
-$heading-weight: config('fontWeights.bold') !default;
+$heading-1-font-size: config('textSizes.2xl') !default;
+$heading-2-font-size: config('textSizes.xl') !default;
+$heading-3-font-size: config('textSizes.lg') !default;
+$heading-4-font-size: config('textSizes.base') !default;
+$heading-5-font-size: config('textSizes.sm') !default;
+$heading-6-font-size: config('textSizes.xs') !default;
+
+$heading-font-weight: config('fontWeights.bold') !default;
 
 $link-color: config('colors.blue') !default;
 $link-hover-color: config('colors.blue-dark') !default;
+
+$strong-font-weight: config('fontWeights.bold') !default;
 
 $hr-background-color: config('colors.grey') !default;
 
@@ -20,8 +29,8 @@ $blockquote-background-color: config('colors.white') !default;
 
 html {
     min-width: 300px;
-    font-size: $body-size;
     text-size-adjust: 100%;
+    font-size: $base-font-size;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -43,13 +52,13 @@ button,
 input,
 select,
 textarea {
-    font-size: $text-size;
-    font-family: $body-family;
+    font-size: $body-font-size;
+    font-family: $body-font-family;
 }
 
 body {
     color: $body-color;
-    font-weight: $body-weight;
+    font-weight: $body-font-weight;
     line-height: $body-line-height;
 }
 
@@ -59,12 +68,36 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: $heading-weight;
+    font-weight: $heading-font-weight;
+}
+
+h1 {
+    font-size: $heading-1-font-size;
+}
+
+h2 {
+    font-size: $heading-2-font-size;
+}
+
+h3 {
+    font-size: $heading-3-font-size;
+}
+
+h4 {
+    font-size: $heading-4-font-size;
+}
+
+h5 {
+    font-size: $heading-5-font-size;
+}
+
+h6 {
+    font-size: $heading-6-font-size;
 }
 
 b,
 strong {
-    font-weight: $strong-weight;
+    font-weight: $strong-font-weight;
 }
 
 a {

@@ -15,7 +15,7 @@ $modal-background-color: rgba(0, 0, 0, 0.85) !default;
     justify-content: center;
     z-index: $modal-z-index;
 
-    &.active {
+    &.is-active {
         display: flex;
     }
 }
