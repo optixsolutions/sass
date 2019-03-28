@@ -203,14 +203,14 @@ $field-margin: config('margin.2') !default;
                 width: 0.6rem;
                 height: 0.6rem;
                 position: absolute;
-                border-radius: 50%;
+                border-radius: 999px;
                 transform: translateY(-50%);
-                background-color: $checkbox-checked-background-color;
+                background-color: $checkbox-checked-color;
             }
 
             &:hover {
                 &:after {
-                    background-color: $checkbox-checked-hover-background-color;
+                    background-color: $checkbox-checked-hover-color;
                 }
             }
         }
