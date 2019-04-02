@@ -129,9 +129,9 @@ $button-static-background-color: config('colors.grey-lightest') !default;
             top: calc(50% - (1rem / 2));
             left: calc(50% - (1rem / 2));
             border: 2px solid transparent;
+            border-left-color: $button-color;
+            border-bottom-color: $button-color;
             animation: spin 500ms infinite linear;
-            border-left-color: $button-border-color;
-            border-bottom-color: $button-border-color;
         }
     }
 }
