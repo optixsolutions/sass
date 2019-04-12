@@ -20,6 +20,8 @@ $button-static-color: config('colors.grey') !default;
 $button-static-border-color: config('colors.grey-light') !default;
 $button-static-background-color: config('colors.grey-lightest') !default;
 
+$button-loader-color: $button-color !default;
+
 .button {
     @include control;
     cursor: pointer;
@@ -90,15 +92,14 @@ $button-static-background-color: config('colors.grey-lightest') !default;
                     color: config('colors.#{nth($colors, 2)}');
                     background-color: config('colors.#{nth($colors, 3)}');
                 }
+
+                &.loading {
+                    &:after {
+                        border-left-color: config('colors.#{nth($colors, 1)}');
+                        border-bottom-color: config('colors.#{nth($colors, 1)}');
+                    }
+                }
             }
-        }
-    }
-
-    &.outlined {
-        background-color: transparent;
-
-        &:hover {
-            background-color: transparent;
         }
     }
 
@@ -129,9 +130,27 @@ $button-static-background-color: config('colors.grey-lightest') !default;
             top: calc(50% - (1rem / 2));
             left: calc(50% - (1rem / 2));
             border: 2px solid transparent;
-            border-left-color: $button-color;
-            border-bottom-color: $button-color;
             animation: spin 500ms infinite linear;
+            border-left-color: $button-loader-color;
+            border-bottom-color: $button-loader-color;
+        }
+    }
+
+    &.outlined {
+        color: $button-border-color;
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        &.loading {
+            color: transparent;
+            
+            &:after {
+                border-left-color: $button-border-color;
+                border-bottom-color: $button-border-color;
+            }
         }
     }
 }
