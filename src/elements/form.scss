@@ -1,72 +1,72 @@
 $input-padding: 0.5rem 0.75rem !default;
-$input-border-radius: config('borderRadius.default') !default;
+$input-border-radius: theme('borderRadius.default') !default;
 
-$input-color: config('colors.grey-darker') !default;
-$input-hover-color: config('colors.grey-darkest') !default;
-$input-disabled-color: config('colors.grey-light') !default;
+$input-color: theme('colors.grey-darker') !default;
+$input-hover-color: theme('colors.grey-darkest') !default;
+$input-disabled-color: theme('colors.grey-light') !default;
 
-$input-placeholder-color: config('colors.grey') !default;
-$input-hover-placeholder-color: config('colors.grey-dark') !default;
-$input-disabled-placeholder-color: config('colors.grey') !default;
+$input-placeholder-color: theme('colors.grey') !default;
+$input-hover-placeholder-color: theme('colors.grey-dark') !default;
+$input-disabled-placeholder-color: theme('colors.grey') !default;
 
-$input-border-color: config('colors.grey-light') !default;
-$input-hover-border-color: config('colors.grey') !default;
-$input-active-border-color: config('colors.grey-light') !default;
-$input-disabled-border-color: config('colors.grey-light') !default;
+$input-border-color: theme('colors.grey-light') !default;
+$input-hover-border-color: theme('colors.grey') !default;
+$input-active-border-color: theme('colors.grey-light') !default;
+$input-disabled-border-color: theme('colors.grey-light') !default;
 
-$input-background-color: config('colors.white') !default;
-$input-hover-background-color: config('colors.white') !default;
-$input-disabled-background-color: config('colors.grey-lighter') !default;
+$input-background-color: theme('colors.white') !default;
+$input-hover-background-color: theme('colors.white') !default;
+$input-disabled-background-color: theme('colors.grey-lighter') !default;
 
-$select-arrow-color: config('colors.grey') !default;
-$select-hover-arrow-color: config('colors.grey-dark') !default;
-$select-disabled-arrow-color: config('colors.grey-light') !default;
+$select-arrow-color: theme('colors.grey') !default;
+$select-hover-arrow-color: theme('colors.grey-dark') !default;
+$select-disabled-arrow-color: theme('colors.grey-light') !default;
 
 $checkbox-top: 0.25rem !default;
-$checkbox-radius: config('borderRadius.default') !default;
+$checkbox-radius: theme('borderRadius.default') !default;
 
-$checkbox-border-color: config('colors.grey-light') !default;
+$checkbox-border-color: theme('colors.grey-light') !default;
 $checkbox-background-color: transparent !default;
 
-$checkbox-hover-border-color: config('colors.grey') !default;
+$checkbox-hover-border-color: theme('colors.grey') !default;
 $checkbox-hover-background-color: transparent !default;
 
-$checkbox-focus-border-color: config('colors.grey-dark') !default;
+$checkbox-focus-border-color: theme('colors.grey-dark') !default;
 $checkbox-focus-background-color: transparent !default;
 
-$checkbox-checked-color: config('colors.blue') !default;
-$checkbox-checked-border-color: config('colors.grey') !default;
+$checkbox-checked-color: theme('colors.blue') !default;
+$checkbox-checked-border-color: theme('colors.grey') !default;
 $checkbox-checked-background-color: transparent !default;
 
-$checkbox-checked-hover-color: config('colors.blue-dark') !default;
-$checkbox-checked-hover-border-color: config('colors.grey-dark') !default;
+$checkbox-checked-hover-color: theme('colors.blue-dark') !default;
+$checkbox-checked-hover-border-color: theme('colors.grey-dark') !default;
 $checkbox-checked-hover-background-color: transparent !default;
 
-$checkbox-checked-focus-color: config('colors.blue-dark') !default;
+$checkbox-checked-focus-color: theme('colors.blue-dark') !default;
 
-$radio-border-color: config('colors.grey-light') !default;
+$radio-border-color: theme('colors.grey-light') !default;
 $radio-background-color: transparent !default;
 
-$radio-hover-border-color: config('colors.grey') !default;
+$radio-hover-border-color: theme('colors.grey') !default;
 $radio-hover-background-color: transparent !default;
 
-$radio-focus-border-color: config('colors.grey-dark') !default;
+$radio-focus-border-color: theme('colors.grey-dark') !default;
 $radio-focus-background-color: transparent !default;
 
-$radio-checked-color: config('colors.blue') !default;
-$radio-checked-hover-color: config('colors.blue-dark') !default;
-$radio-checked-focus-color: config('colors.blue-dark') !default;
+$radio-checked-color: theme('colors.blue') !default;
+$radio-checked-hover-color: theme('colors.blue-dark') !default;
+$radio-checked-focus-color: theme('colors.blue-dark') !default;
 
 $label-font-size: $body-font-size !default;
-$label-margin: config('margin.2') !default;
-$label-color: config('colors.black') !default;
-$label-asterisk-color: config('colors.red') !default;
-$label-font-weight: config('fontWeights.semibold') !default;
+$label-margin: theme('margin.2') !default;
+$label-color: theme('colors.black') !default;
+$label-asterisk-color: theme('colors.red') !default;
+$label-font-weight: theme('fontWeight.semibold') !default;
 
-$help-font-size: config('textSizes.xs') !default;
-$help-color: config('colors.grey') !default;
+$help-font-size: theme('fontSize.xs') !default;
+$help-color: theme('colors.grey') !default;
 
-$field-margin: config('margin.2') !default;
+$field-margin: theme('margin.2') !default;
 
 @mixin input {
     @include control;
@@ -356,7 +356,7 @@ $field-margin: config('margin.2') !default;
     display: block;
     color: $help-color;
     font-size: $help-font-size;
-    margin-top: config('margin.1');
+    margin-top: theme('margin.1');
 }
 
 .field {

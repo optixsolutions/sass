@@ -1,23 +1,23 @@
 $dropdown-padding: 0.5rem 0 !default;
-$dropdown-font-size: config('textSizes.sm') !default;
-$dropdown-border-color: config('colors.grey-light') !default;
-$dropdown-border-radius: config('borderRadius.default') !default;
-$dropdown-background-color: config('colors.white') !default;
+$dropdown-font-size: theme('fontSize.sm') !default;
+$dropdown-border-color: theme('colors.grey-light') !default;
+$dropdown-border-radius: theme('borderRadius.default') !default;
+$dropdown-background-color: theme('colors.white') !default;
 
-$dropdown-z-index: config('zIndex.20') !default;
-$dropdown-min-width: config('width.48') !default;
-$dropdown-shadow: config('shadows.default') !default;
+$dropdown-z-index: theme('zIndex.20') !default;
+$dropdown-min-width: theme('width.48') !default;
+$dropdown-shadow: theme('boxShadow.default') !default;
 
 $dropdown-menu-padding: 0.25rem !default;
 
 $dropdown-item-padding: 0.3rem 1rem !default;
-$dropdown-item-line-height: config('leading.normal') !default;
+$dropdown-item-line-height: theme('lineHeight.normal') !default;
 
-$dropdown-item-hover-color: config('colors.black') !default;
-$dropdown-item-hover-background-color: config('colors.grey-lighter') !default;
+$dropdown-item-hover-color: theme('colors.black') !default;
+$dropdown-item-hover-background-color: theme('colors.grey-lighter') !default;
 
-$dropdown-item-active-color: config('colors.white') !default;
-$dropdown-item-active-background-color: config('colors.blue') !default;
+$dropdown-item-active-color: theme('colors.white') !default;
+$dropdown-item-active-background-color: theme('colors.blue') !default;
 
 .dropdown {
     position: relative;

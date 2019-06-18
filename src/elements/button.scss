@@ -1,24 +1,24 @@
 $button-padding: 0 1.5rem !default;
-$button-font-weight: config('fontWeights.normal') !default;
-$button-border-radius: config('borderRadius.default') !default;
+$button-font-weight: theme('fontWeight.normal') !default;
+$button-border-radius: theme('borderRadius.default') !default;
 
-$button-color: config('colors.black') !default;
-$button-hover-color: config('colors.black') !default;
+$button-color: theme('colors.black') !default;
+$button-hover-color: theme('colors.black') !default;
 
-$button-background-color: config('colors.white') !default;
-$button-hover-background-color: config('colors.grey-lightest') !default;
+$button-background-color: theme('colors.white') !default;
+$button-hover-background-color: theme('colors.grey-lightest') !default;
 
 $button-border-width: 2px !default;
-$button-border-color: config('colors.grey') !default;
-$button-hover-border-color: config('colors.grey-dark') !default;
+$button-border-color: theme('colors.grey') !default;
+$button-hover-border-color: theme('colors.grey-dark') !default;
 
 $button-disabled-opacity: 0.5 !default;
-$button-disabled-border-color: config('colors.grey-light') !default;
-$button-disabled-background-color: config('colors.white') !default;
+$button-disabled-border-color: theme('colors.grey-light') !default;
+$button-disabled-background-color: theme('colors.white') !default;
 
-$button-static-color: config('colors.grey') !default;
-$button-static-border-color: config('colors.grey-light') !default;
-$button-static-background-color: config('colors.grey-lightest') !default;
+$button-static-color: theme('colors.grey') !default;
+$button-static-border-color: theme('colors.grey-light') !default;
+$button-static-background-color: theme('colors.grey-lightest') !default;
 
 $button-loader-color: $button-color !default;
 
@@ -63,40 +63,40 @@ $button-loader-color: $button-color !default;
 
     @each $name, $colors in $button-colours {
         &.#{"" + $name} {
-            color: config('colors.#{nth($colors, 2)}');
-            border-color: config('colors.#{nth($colors, 1)}');
-            background-color: config('colors.#{nth($colors, 1)}');
+            color: theme('colors.#{nth($colors, 2)}');
+            border-color: theme('colors.#{nth($colors, 1)}');
+            background-color: theme('colors.#{nth($colors, 1)}');
     
             &:hover {
-                color: config('colors.#{nth($colors, 4)}');
-                border-color: config('colors.#{nth($colors, 3)}');
-                background-color: config('colors.#{nth($colors, 3)}');
+                color: theme('colors.#{nth($colors, 4)}');
+                border-color: theme('colors.#{nth($colors, 3)}');
+                background-color: theme('colors.#{nth($colors, 3)}');
             }
 
             &[disabled] {
                 border-color: transparent;
-                background-color: config('colors.#{nth($colors, 1)}');
+                background-color: theme('colors.#{nth($colors, 1)}');
             }
 
             &.loading {
                 &:after {
-                    border-left-color: config('colors.#{nth($colors, 2)}');
-                    border-bottom-color: config('colors.#{nth($colors, 2)}');
+                    border-left-color: theme('colors.#{nth($colors, 2)}');
+                    border-bottom-color: theme('colors.#{nth($colors, 2)}');
                 }
             }
 
             &.outlined {
-                color: config('colors.#{nth($colors, 1)}');
+                color: theme('colors.#{nth($colors, 1)}');
         
                 &:hover {
-                    color: config('colors.#{nth($colors, 2)}');
-                    background-color: config('colors.#{nth($colors, 3)}');
+                    color: theme('colors.#{nth($colors, 2)}');
+                    background-color: theme('colors.#{nth($colors, 3)}');
                 }
 
                 &.loading {
                     &:after {
-                        border-left-color: config('colors.#{nth($colors, 1)}');
-                        border-bottom-color: config('colors.#{nth($colors, 1)}');
+                        border-left-color: theme('colors.#{nth($colors, 1)}');
+                        border-bottom-color: theme('colors.#{nth($colors, 1)}');
                     }
                 }
             }

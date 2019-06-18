@@ -1,31 +1,31 @@
 $base-font-size: 16px !default;
 
-$body-font-size: config('textSizes.sm') !default;
-$body-font-family: config('fonts.sans') !default;
-$body-font-weight: config('fontWeights.normal') !default;
-$body-line-height: config('leading.normal') !default;
+$body-font-size: theme('fontSize.sm') !default;
+$body-font-family: theme('fontFamily.sans') !default;
+$body-font-weight: theme('fontWeight.normal') !default;
+$body-line-height: theme('lineHeight.normal') !default;
 
-$body-color: config('colors.black') !default;
-$body-background-color: config('colors.white') !default;
+$body-color: theme('colors.black') !default;
+$body-background-color: theme('colors.white') !default;
 
-$heading-1-font-size: config('textSizes.2xl') !default;
-$heading-2-font-size: config('textSizes.xl') !default;
-$heading-3-font-size: config('textSizes.lg') !default;
-$heading-4-font-size: config('textSizes.base') !default;
-$heading-5-font-size: config('textSizes.sm') !default;
-$heading-6-font-size: config('textSizes.xs') !default;
+$heading-1-font-size: theme('fontSize.2xl') !default;
+$heading-2-font-size: theme('fontSize.xl') !default;
+$heading-3-font-size: theme('fontSize.lg') !default;
+$heading-4-font-size: theme('fontSize.base') !default;
+$heading-5-font-size: theme('fontSize.sm') !default;
+$heading-6-font-size: theme('fontSize.xs') !default;
 
-$heading-font-weight: config('fontWeights.bold') !default;
+$heading-font-weight: theme('fontWeight.bold') !default;
 
-$link-color: config('colors.blue') !default;
-$link-hover-color: config('colors.blue-dark') !default;
+$link-color: theme('colors.blue') !default;
+$link-hover-color: theme('colors.blue-dark') !default;
 
-$strong-font-weight: config('fontWeights.bold') !default;
+$strong-font-weight: theme('fontWeight.bold') !default;
 
-$hr-background-color: config('colors.grey') !default;
+$hr-background-color: theme('colors.grey') !default;
 
-$blockquote-border-color: config('colors.grey') !default;
-$blockquote-background-color: config('colors.white') !default;
+$blockquote-border-color: theme('colors.grey') !default;
+$blockquote-background-color: theme('colors.white') !default;
 
 html {
     min-width: 300px;

@@ -1,12 +1,12 @@
 $title-color: $body-color !default;
-$title-font-size: config('textSizes.3xl') !default;
-$title-font-family: config('fonts.sans') !default;
-$title-font-weight: config('fontWeights.bold') !default;
+$title-font-size: theme('fontSize.3xl') !default;
+$title-font-family: theme('fontFamily.sans') !default;
+$title-font-weight: theme('fontWeight.bold') !default;
 
 $subtitle-color: $body-color !default;
-$subtitle-font-size: config('textSizes.sm') !default;
-$subtitle-font-family: config('fonts.serif') !default;
-$subtitle-font-weight: config('fontWeights.normal') !default;
+$subtitle-font-size: theme('fontSize.sm') !default;
+$subtitle-font-family: theme('fontFamily.serif') !default;
+$subtitle-font-weight: theme('fontWeight.normal') !default;
 
 .title,
 .subtitle {

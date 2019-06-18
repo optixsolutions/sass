@@ -1,5 +1,5 @@
-$hamburger-color: config('colors.black') !default;
-$hamburger-active-color: config('colors.black') !default;
+$hamburger-color: theme('colors.black') !default;
+$hamburger-active-color: theme('colors.black') !default;
 
 $hamburger-width: 2rem !default;
 $hamburger-height: 1.5rem !default;

@@ -1,7 +1,7 @@
 $card-padding: 2rem !default;
-$card-shadow: config('shadows.lg') !default;
-$card-background-color: config('colors.white') !default;
-$card-border-radius: config('borderRadius.default') !default;
+$card-shadow: theme('boxShadow.lg') !default;
+$card-background-color: theme('colors.white') !default;
+$card-border-radius: theme('borderRadius.default') !default;
 
 .card {
     box-shadow: $card-shadow;
