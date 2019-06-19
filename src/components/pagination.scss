@@ -1,23 +1,23 @@
 $pagination-margin: 0.25rem !default;
 $pagination-min-width: $control-height !default;
 
-$pagination-color: theme('colors.grey') !default;
-$pagination-hover-color: theme('colors.grey-dark') !default;
+$pagination-color: theme('colors.grey.500') !default;
+$pagination-hover-color: theme('colors.grey.600') !default;
 
-$pagination-ellipsis-color: theme('colors.grey-light') !default;
+$pagination-ellipsis-color: theme('colors.grey.400') !default;
 
 $pagination-border-radius: theme('borderRadius.default') !default;
-$pagination-border-color: theme('colors.grey-light') !default;
-$pagination-hover-border-color: theme('colors.grey') !default;
+$pagination-border-color: theme('colors.grey.400') !default;
+$pagination-hover-border-color: theme('colors.grey.500') !default;
 
-$pagination-focus-border-color: theme('colors.grey-dark') !default;
+$pagination-focus-border-color: theme('colors.grey.600') !default;
 
 $pagination-current-color: theme('colors.white') !default;
-$pagination-current-border-color: theme('colors.grey-dark') !default;
-$pagination-current-background-color: theme('colors.grey-dark') !default;
+$pagination-current-border-color: theme('colors.grey.600') !default;
+$pagination-current-background-color: theme('colors.grey.600') !default;
 
-$pagination-disabled-color: theme('colors.grey') !default;
-$pagination-disabled-border-color: theme('colors.grey-light') !default;
+$pagination-disabled-color: theme('colors.grey.500') !default;
+$pagination-disabled-border-color: theme('colors.grey.400') !default;
 $pagination-disabled-background-color: theme('colors.white') !default;
 
 .pagination {

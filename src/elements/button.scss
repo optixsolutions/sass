@@ -6,19 +6,19 @@ $button-color: theme('colors.black') !default;
 $button-hover-color: theme('colors.black') !default;
 
 $button-background-color: theme('colors.white') !default;
-$button-hover-background-color: theme('colors.grey-lightest') !default;
+$button-hover-background-color: theme('colors.grey.300') !default;
 
 $button-border-width: 2px !default;
-$button-border-color: theme('colors.grey') !default;
-$button-hover-border-color: theme('colors.grey-dark') !default;
+$button-border-color: theme('colors.grey.500') !default;
+$button-hover-border-color: theme('colors.grey.600') !default;
 
 $button-disabled-opacity: 0.5 !default;
-$button-disabled-border-color: theme('colors.grey-light') !default;
+$button-disabled-border-color: theme('colors.grey.400') !default;
 $button-disabled-background-color: theme('colors.white') !default;
 
-$button-static-color: theme('colors.grey') !default;
-$button-static-border-color: theme('colors.grey-light') !default;
-$button-static-background-color: theme('colors.grey-lightest') !default;
+$button-static-color: theme('colors.grey.500') !default;
+$button-static-border-color: theme('colors.grey.400') !default;
+$button-static-background-color: theme('colors.grey.200') !default;
 
 $button-loader-color: $button-color !default;
 

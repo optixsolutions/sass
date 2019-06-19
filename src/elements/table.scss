@@ -1,8 +1,8 @@
-$table-color: theme('colors.grey-darker') !default;
-$table-border-color: theme('colors.grey-light') !default;
+$table-color: theme('colors.grey.700') !default;
+$table-border-color: theme('colors.grey.400') !default;
 $table-background-color: theme('colors.white') !default;
 
-$table-row-hover-background-color: theme('colors.grey-lightest') !default;
+$table-row-hover-background-color: theme('colors.grey.200') !default;
 
 table {
     width: 100%;

@@ -17,14 +17,14 @@ $heading-6-font-size: theme('fontSize.xs') !default;
 
 $heading-font-weight: theme('fontWeight.bold') !default;
 
-$link-color: theme('colors.blue') !default;
-$link-hover-color: theme('colors.blue-dark') !default;
+$link-color: theme('colors.blue.500') !default;
+$link-hover-color: theme('colors.blue.600') !default;
 
 $strong-font-weight: theme('fontWeight.bold') !default;
 
-$hr-background-color: theme('colors.grey') !default;
+$hr-background-color: theme('colors.grey.500') !default;
 
-$blockquote-border-color: theme('colors.grey') !default;
+$blockquote-border-color: theme('colors.grey.500') !default;
 $blockquote-background-color: theme('colors.white') !default;
 
 html {
