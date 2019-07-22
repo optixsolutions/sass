@@ -115,6 +115,34 @@ $content-table-heading-font-weight: theme('fontWeight.semibold') !default;
         }
     }
 
+    ul {
+        padding-left: 1.5rem;
+        list-style-type: disc;
+
+        ul { 
+            list-style-type: circle; 
+            list-style-position: inside; 
+        }
+
+        ol { 
+            list-style-type: lower-latin; 
+        }
+    }
+
+    ol {
+        padding-left: 1.5rem;
+        list-style-type: decimal;
+
+        ul { 
+            list-style-type: circle; 
+            list-style-position: inside; 
+        }
+
+        ol { 
+            list-style-type: lower-latin; 
+        }
+    }
+
     &:after {
         clear: both;
         content: '';

@@ -61,48 +61,6 @@ $button-loader-color: $button-color !default;
         background-color: $button-hover-background-color;
     }
 
-    @each $name, $colors in $button-colours {
-        &.#{"" + $name} {
-            color: theme('colors.#{nth($colors, 2)}');
-            border-color: theme('colors.#{nth($colors, 1)}');
-            background-color: theme('colors.#{nth($colors, 1)}');
-    
-            &:hover {
-                color: theme('colors.#{nth($colors, 4)}');
-                border-color: theme('colors.#{nth($colors, 3)}');
-                background-color: theme('colors.#{nth($colors, 3)}');
-            }
-
-            &[disabled] {
-                border-color: transparent;
-                background-color: theme('colors.#{nth($colors, 1)}');
-            }
-
-            &.loading {
-                &:after {
-                    border-left-color: theme('colors.#{nth($colors, 2)}');
-                    border-bottom-color: theme('colors.#{nth($colors, 2)}');
-                }
-            }
-
-            &.outlined {
-                color: theme('colors.#{nth($colors, 1)}');
-        
-                &:hover {
-                    color: theme('colors.#{nth($colors, 2)}');
-                    background-color: theme('colors.#{nth($colors, 3)}');
-                }
-
-                &.loading {
-                    &:after {
-                        border-left-color: theme('colors.#{nth($colors, 1)}');
-                        border-bottom-color: theme('colors.#{nth($colors, 1)}');
-                    }
-                }
-            }
-        }
-    }
-
     &.static {
         pointer-events: none;
         color: $button-static-color;
