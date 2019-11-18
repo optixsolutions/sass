@@ -22,6 +22,10 @@ $select-arrow-color: theme('colors.grey.500') !default;
 $select-hover-arrow-color: theme('colors.grey.600') !default;
 $select-disabled-arrow-color: theme('colors.grey.400') !default;
 
+$select-placeholder-color: theme('colors.grey.500') !default;
+$select-hover-placeholder-color: theme('colors.grey.600') !default;
+$select-disabled-placeholder-color: theme('colors.grey.400') !default;
+
 $checkbox-top: 0.25rem !default;
 $checkbox-radius: theme('borderRadius.default') !default;
 
@@ -303,7 +307,8 @@ $field-margin: theme('margin.2') !default;
         display: block;
         cursor: pointer;
         max-width: 100%;
-        
+        color: $select-placeholder-color;
+
         &::-ms-expand {
             display: none;
         }
@@ -320,6 +325,10 @@ $field-margin: theme('margin.2') !default;
                 padding: 0.5rem 1rem;
             }
         }
+
+        &:hover {
+            color: $select-hover-placeholder-color;
+        }
     }
 
     &:not(.multiple):hover {
@@ -331,6 +340,10 @@ $field-margin: theme('margin.2') !default;
     &.disabled {
         &:after {
             border-color: $select-disabled-arrow-color;
+        }
+
+        select {
+            color: $select-disabled-placeholder-color;
         }
     }
 
