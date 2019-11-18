@@ -11,7 +11,7 @@
 npm install @optix/sass --save
 
 # yarn
-yarn add @optix/sass
+yarn add @optix/sass --dev
 ```
 
 ## License
