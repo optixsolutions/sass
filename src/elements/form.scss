@@ -235,12 +235,12 @@ $field-margin: theme('margin.2') !default;
 
             &:after {
                 content: '';
-                left: 0.2rem;
-                width: 0.6rem;
-                height: 0.6rem;
+                left: 0.25rem;
+                width: 0.5rem;
+                height: 0.5rem;
                 position: absolute;
                 border-radius: 999px;
-                top: calc(#{$checkbox-top} + 0.2rem);
+                top: calc(#{$checkbox-top} + 0.25rem);
                 background-color: $radio-checked-color;
             }
 
