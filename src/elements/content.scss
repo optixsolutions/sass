@@ -30,6 +30,7 @@ $content-table-heading-font-weight: theme('fontWeight.semibold') !default;
         }
     }
 
+    h1,
     h2,
     h3,
     h4,
@@ -37,6 +38,18 @@ $content-table-heading-font-weight: theme('fontWeight.semibold') !default;
     h6 {
         &:not(:last-child) {
             margin-bottom: $content-margin / 2;
+        }
+
+        &.subtitle {
+            + .title {
+                margin-top: -($content-margin / 2);
+            }
+        }
+
+        &.title {
+            + .subtitle {
+                margin-top: -($content-margin / 2);
+            }
         }
     }
 
