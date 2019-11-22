@@ -40,18 +40,18 @@ $button-loader-color: $button-color !default;
 
     .icon {
         &:first-child:not(:last-child) {
-            margin-right: 0.1875em;
-            margin-left: calc(-0.5em - 2px);
+            margin-right: 0.5em;
+            margin-left: -0.8em;
         }
-        
+
         &:last-child:not(:first-child) {
-            margin-left: 0.1875em;
-            margin-right: calc(-0.5em - 2px);
+            margin-left: 0.5em;
+            margin-right: -0.8em;
         }
 
         &:first-child:last-child {
-            margin-left: calc(-0.5em - 2px);
-            margin-right: calc(-0.5em - 2px);
+            margin-left: -0.8em;
+            margin-right: -0.8em;
         }
     }
 

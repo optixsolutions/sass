@@ -80,7 +80,9 @@ $dropdown-item-active-background-color: theme('colors.blue.500') !default;
 .dropdown-item {
     display: block;
     text-align: left;
+    overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
     font-size: $dropdown-font-size;
     padding: $dropdown-item-padding;
     line-height: $dropdown-item-line-height;
