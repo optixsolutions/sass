@@ -276,11 +276,11 @@ $field-margin: theme('margin.2') !default;
     position: relative;
     vertical-align: top;
     display: inline-block;
-    
+
     &:not(.multiple) {
         height: $control-height;
     }
-    
+
     &:not(.multiple) {
         &:after {
             top: 50%;
@@ -302,7 +302,7 @@ $field-margin: theme('margin.2') !default;
 
     select {
         @include input;
-        
+
         outline: none;
         display: block;
         cursor: pointer;
@@ -446,11 +446,24 @@ $field-margin: theme('margin.2') !default;
     }
 }
 
-.g-recaptcha {
-    display: flex;
+.control {
+    &.control-icon-right {
+        position: relative;
 
-    @media (max-width: 370px) {
-        transform: scale(0.77);
-        justify-content: center;
+        .icon {
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+            width: 3rem;
+            z-index: 10;
+            height: auto;
+            position: absolute;
+            color: $input-placeholder-color;
+            background-color: $input-background-color;
+
+            &:hover {
+                color: $input-color;
+            }
+        }
     }
 }
