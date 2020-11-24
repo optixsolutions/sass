@@ -3,27 +3,32 @@ $input-border-radius: theme('borderRadius.default') !default;
 
 $input-color: theme('colors.grey.600') !default;
 $input-hover-color: theme('colors.grey.700') !default;
+$input-focus-color: $input-hover-color !default;
 $input-disabled-color: theme('colors.grey.400') !default;
 
 $input-placeholder-color: theme('colors.grey.500') !default;
 $input-hover-placeholder-color: theme('colors.grey.600') !default;
+$input-focus-placeholder-color: $input-hover-placeholder-color !default;
 $input-disabled-placeholder-color: theme('colors.grey.500') !default;
 
 $input-border-color: theme('colors.grey.400') !default;
 $input-hover-border-color: theme('colors.grey.500') !default;
-$input-active-border-color: theme('colors.grey.400') !default;
+$input-focus-border-color: $input-hover-border-color !default;
 $input-disabled-border-color: theme('colors.grey.400') !default;
 
 $input-background-color: theme('colors.white') !default;
 $input-hover-background-color: theme('colors.white') !default;
+$input-focus-background-color: $input-hover-background-color !default;
 $input-disabled-background-color: theme('colors.grey.300') !default;
 
 $select-arrow-color: theme('colors.grey.500') !default;
 $select-hover-arrow-color: theme('colors.grey.600') !default;
+$select-focus-arrow-color: $select-hover-arrow-color !default;
 $select-disabled-arrow-color: theme('colors.grey.400') !default;
 
 $select-placeholder-color: theme('colors.grey.500') !default;
 $select-hover-placeholder-color: theme('colors.grey.600') !default;
+$select-focus-placeholder-color: $select-hover-placeholder-color !default;
 $select-disabled-placeholder-color: theme('colors.grey.400') !default;
 
 $checkbox-top: 0.25rem !default;
@@ -97,7 +102,13 @@ $field-margin: theme('margin.2') !default;
 
     &:focus,
     &:active {
-        border-color: $input-active-border-color;
+        color: $input-focus-color;
+        border-color: $input-focus-border-color;
+        background-color: $input-focus-background-color;
+
+        @include placeholder {
+            color: $input-focus-placeholder-color;
+        }
     }
 
     &[disabled] {
@@ -329,11 +340,21 @@ $field-margin: theme('margin.2') !default;
         &:hover {
             color: $select-hover-placeholder-color;
         }
+
+        &:focus {
+            color: $select-focus-placeholder-color;
+        }
     }
 
     &:not(.multiple):hover {
         &:after {
             border-top-color: $select-hover-arrow-color;
+        }
+    }
+
+    &:not(.multiple):focus {
+        &:after {
+            border-top-color: $select-focus-arrow-color;
         }
     }
 

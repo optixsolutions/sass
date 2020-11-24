@@ -4,13 +4,16 @@ $button-border-radius: theme('borderRadius.default') !default;
 
 $button-color: theme('colors.black') !default;
 $button-hover-color: theme('colors.black') !default;
+$button-focus-color: $button-hover-color !default;
 
 $button-background-color: theme('colors.white') !default;
 $button-hover-background-color: theme('colors.grey.300') !default;
+$button-focus-background-color: $button-hover-background-color !default;
 
 $button-border-width: 2px !default;
 $button-border-color: theme('colors.grey.500') !default;
 $button-hover-border-color: theme('colors.grey.600') !default;
+$button-focus-border-color: $button-hover-border-color !default;
 
 $button-disabled-opacity: 0.5 !default;
 $button-disabled-border-color: theme('colors.grey.400') !default;
@@ -61,6 +64,12 @@ $button-loader-color: $button-color !default;
         background-color: $button-hover-background-color;
     }
 
+    &:focus {
+        color: $button-focus-color;
+        border-color: $button-focus-border-color;
+        background-color: $button-focus-background-color;
+    }
+
     &.static {
         pointer-events: none;
         color: $button-static-color;
@@ -104,7 +113,7 @@ $button-loader-color: $button-color !default;
 
         &.loading {
             color: transparent;
-            
+
             &:after {
                 border-left-color: $button-border-color;
                 border-bottom-color: $button-border-color;
